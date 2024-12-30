@@ -12,6 +12,17 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourwebsite.com">
     <meta property="og:image" content="https://yourwebsite.com/lotto-thumbnail.jpg">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XK1DB134SP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XK1DB134SP');
+    </script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -125,8 +136,7 @@
 
     <script>
         const numberWeights = {
-            1: 5, 2: 3, 3: 8, 4: 2, 5: 1, 6: 7, 7: 4, 8: 3, 9: 1, 10: 2,
-            11: 4, 12: 9, 13: 8, 14: 6, 15: 3, 16: 5, 17: 7, 18: 6, 19: 2, 20: 4
+            1: 5, 2: 3, 3: 8, 4: 2, 5: 1, 6: 7, 7: 4, 8: 3, 9: 1, 10: 2
         };
         const history = [];
 
@@ -153,8 +163,6 @@
             history.unshift(`${Array.from(numbers).sort((a, b) => a - b).join(', ')} | 보너스: ${bonusNumber}`);
             if (history.length > 8) history.pop();
             document.getElementById('historyList').innerHTML = history.map(item => `<li>${item}</li>`).join('');
-            document.getElementById('lottoNumbers').innerText = `번호: ${Array.from(numbers).sort((a, b) => a - b).join(', ')}`;
-            document.getElementById('bonusNumber').innerText = `보너스 번호: ${bonusNumber}`;
         }
     </script>
 </body>
