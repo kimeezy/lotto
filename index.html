@@ -1,181 +1,161 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>로또 번호 생성기</title>
-  <meta name="description" content="로또 번호 생성기 - 랜덤 및 가중치 기반 번호 생성, 보너스 번호 포함. 당첨 확률을 높이는 스마트 로또 번호 추천 도구!">
-  <meta name="keywords" content="로또, 로또 번호 생성기, 로또 당첨 번호, 로또 보너스 번호, 랜덤 로또, 확률 기반 로또">
-  <meta name="author" content="Lotto Generator Team">
-  <meta property="og:title" content="로또 번호 생성기">
-  <meta property="og:description" content="스마트한 로또 번호 생성기로 당첨 확률을 높이세요! 랜덤 및 가중치 기반 번호 추천.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourwebsite.com">
-  <meta property="og:image" content="https://yourwebsite.com/lotto-thumbnail.jpg">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f9fa;
-    }
-
-    h1 {
-      margin-top: 20px;
-      color: #333;
-      font-size: 1.8em;
-    }
-
-    .lotto-container {
-      margin: 20px auto;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 400px;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .numbers {
-      font-size: 1.4em;
-      font-weight: bold;
-      margin: 15px 0;
-      color: #007bff;
-      word-wrap: break-word;
-    }
-
-    .bonus-number {
-      font-size: 1.2em;
-      font-weight: bold;
-      margin: 10px 0;
-      color: #dc3545;
-    }
-
-    .history {
-      margin-top: 20px;
-      text-align: left;
-      font-size: 0.9em;
-      color: #555;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .history h3 {
-      margin-bottom: 5px;
-    }
-
-    .history ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .history li {
-      background: #f1f1f1;
-      margin: 5px 0;
-      padding: 5px 10px;
-      border-radius: 5px;
-    }
-
-    .description {
-      margin-top: 30px;
-      font-size: 0.9em;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    button {
-      font-size: 1em;
-      padding: 10px 20px;
-      margin-top: 10px;
-      border: none;
-      border-radius: 5px;
-      background-color: #28a745;
-      color: white;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #218838;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 번호 생성기</title>
+    <meta name="description" content="로또 번호 생성기 - 랜덤 및 가중치 기반 번호 생성, 보너스 번호 포함. 당첨 확률을 높이는 스마트 로또 번호 추천 도구!">
+    <meta name="keywords" content="로또, 로또 번호 생성기, 로또 당첨 번호, 로또 보너스 번호, 랜덤 로또, 확률 기반 로또">
+    <meta name="author" content="Lotto Generator Team">
+    <meta property="og:title" content="로또 번호 생성기">
+    <meta property="og:description" content="스마트한 로또 번호 생성기로 당첨 확률을 높이세요! 랜덤 및 가중치 기반 번호 추천.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="https://yourwebsite.com/lotto-thumbnail.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            margin-top: 20px;
+            color: #333;
+            font-size: 1.8em;
+        }
+        .lotto-container {
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .numbers {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #007bff;
+            word-wrap: break-word;
+        }
+        .bonus-number {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #dc3545;
+        }
+        .history {
+            margin-top: 20px;
+            text-align: left;
+            font-size: 0.9em;
+            color: #555;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .history h3 {
+            margin-bottom: 5px;
+        }
+        .history ul {
+            list-style: none;
+            padding: 0;
+        }
+        .history li {
+            background: #f1f1f1;
+            margin: 5px 0;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .description {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.5;
+        }
+        button {
+            font-size: 1em;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
-
 <body>
-  <h1>🎲 로또 번호 생성기 🎲</h1>
-  <div class="lotto-container">
-    <div class="mode-select">
-      <label>
-        <input type="radio" name="mode" value="random" checked> 랜덤 생성
-      </label>
-      <label>
-        <input type="radio" name="mode" value="weighted"> 가중치 기반 생성
-      </label>
+    <h1>🎲 로또 번호 생성기 🎲</h1>
+    <div class="lotto-container">
+        <div class="mode-select">
+            <label>
+                <input type="radio" name="mode" value="random" checked> 랜덤 생성
+            </label>
+            <label>
+                <input type="radio" name="mode" value="weighted"> 가중치 기반 생성
+            </label>
+        </div>
+        <div class="numbers" id="lottoNumbers">번호를 생성하세요!</div>
+        <div class="bonus-number" id="bonusNumber">보너스 번호: </div>
+        <button onclick="generateLottoNumbers()">번호 생성</button>
     </div>
-    <div class="numbers" id="lottoNumbers">번호를 생성하세요!</div>
-    <div class="bonus-number" id="bonusNumber">보너스 번호: </div>
-    <button onclick="generateLottoNumbers()">번호 생성</button>
-  </div>
+    
+    <div class="history">
+        <h3>📜 최근 생성된 번호</h3>
+        <ul id="historyList"></ul>
+    </div>
 
-  <div class="history">
-    <h3>📜 최근 생성된 번호</h3>
-    <ul id="historyList"></ul>
-  </div>
+    <div class="description">
+        <h2>📘 사용 가이드</h2>
+        <p>이 로또 번호 생성기는 두 가지 방식으로 번호를 추천합니다:</p>
+        <ul>
+            <li><strong>랜덤 생성:</strong> 완전히 무작위로 번호를 생성합니다.</li>
+            <li><strong>가중치 기반 생성:</strong> 과거 당첨 번호 데이터를 기반으로 자주 등장한 숫자에 가중치를 부여하여 번호를 추천합니다.</li>
+        </ul>
+        <p>생성된 번호는 중복되지 않으며, 추가로 보너스 번호가 제공됩니다.</p>
+        <p>당첨을 기원합니다! 🍀</p>
+    </div>
 
-  <div class="description">
-    <h2>📘 사용 가이드</h2>
-    <p>이 로또 번호 생성기는 두 가지 방식으로 번호를 추천합니다:</p>
-    <ul>
-      <li><strong>랜덤 생성:</strong> 완전히 무작위로 번호를 생성합니다.</li>
-      <li><strong>가중치 기반 생성:</strong> 과거 당첨 번호 데이터를 기반으로 자주 등장한 숫자에 가중치를 부여하여 번호를 추천합니다.</li>
-    </ul>
-    <p>생성된 번호는 중복되지 않으며, 추가로 보너스 번호가 제공됩니다.</p>
-    <p>당첨을 기원합니다! 🍀</p>
-  </div>
+    <script>
+        const numberWeights = {
+            1: 5, 2: 3, 3: 8, 4: 2, 5: 1, 6: 7, 7: 4, 8: 3, 9: 1, 10: 2,
+            11: 4, 12: 9, 13: 8, 14: 6, 15: 3, 16: 5, 17: 7, 18: 6, 19: 2, 20: 4
+        };
+        const history = [];
 
-  <script>
-    const numberWeights = {
-      1: 5,
-      2: 3,
-      3: 8,
-      4: 2,
-      5: 1,
-      6: 7,
-      7: 4,
-      8: 3,
-      9: 1,
-      10: 2,
-      11: 4,
-      12: 9,
-      13: 8,
-      14: 6,
-      15: 3,
-      16: 5,
-      17: 7,
-      18: 6,
-      19: 2,
-      20: 4
-    };
-    const history = [];
+        function weightedRandomNumber() {
+            const numbers = [];
+            for (const [num, weight] of Object.entries(numberWeights)) {
+                for (let i = 0; i < weight; i++) {
+                    numbers.push(parseInt(num));
+                }
+            }
+            return numbers[Math.floor(Math.random() * numbers.length)];
+        }
 
-    function generateLottoNumbers() {
-      const mode = document.querySelector('input[name="mode"]:checked').value;
-      const numbers = new Set();
-      while (numbers.size < 6) {
-        numbers.add(mode === 'weighted' ? weightedRandomNumber() : Math.floor(Math.random() * 45) + 1);
-      }
-      let bonusNumber;
-      do {
-        bonusNumber = Math.floor(Math.random() * 45) + 1;
-      } while (numbers.has(bonusNumber));
-      history.unshift(`${Array.from(numbers).sort((a, b) => a - b).join(', ')} | 보너스: ${bonusNumber}`);
-      if (history.length > 8) history.pop();
-      document.getElementById('historyList').innerHTML = history.map(item => `<li>${item}</li>`).join('');
-    }
-  </script>
+        function generateLottoNumbers() {
+            const mode = document.querySelector('input[name="mode"]:checked').value;
+            const numbers = new Set();
+            while (numbers.size < 6) {
+                numbers.add(mode === 'weighted' ? weightedRandomNumber() : Math.floor(Math.random() * 45) + 1);
+            }
+            let bonusNumber;
+            do {
+                bonusNumber = mode === 'weighted' ? weightedRandomNumber() : Math.floor(Math.random() * 45) + 1;
+            } while (numbers.has(bonusNumber));
+            history.unshift(`${Array.from(numbers).sort((a, b) => a - b).join(', ')} | 보너스: ${bonusNumber}`);
+            if (history.length > 8) history.pop();
+            document.getElementById('historyList').innerHTML = history.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('lottoNumbers').innerText = `번호: ${Array.from(numbers).sort((a, b) => a - b).join(', ')}`;
+            document.getElementById('bonusNumber').innerText = `보너스 번호: ${bonusNumber}`;
+        }
+    </script>
 </body>
-
 </html>
