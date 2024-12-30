@@ -1,0 +1,42 @@
+# 🖥️ macOS 관련 파일
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 🪟 Windows 관련 파일
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ⚙️ IDE 및 에디터 관련 파일
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# 📝 로그 및 임시 파일
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+*.log
+*.tmp
+
+# 📦 빌드 및 배포 폴더 (빌드 도구 사용 시)
+dist/
+build/
+node_modules/
+.env
+.env.local
+.env.production
+.env.development
+
+# 🚀 캐시 및 임시 빌드 파일
+.cache/
+__pycache__/
+
+# 📄 HTML 프로젝트 관련
+*.bak         # 백업 파일
+*.swp         # Vim 임시 파일
+*.tmp         # 임시 파일
+*.lock        # 잠금 파일
