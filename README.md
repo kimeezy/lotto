@@ -11,7 +11,7 @@
 - **최근 생성 이력:** 최대 8개의 최근 생성 번호를 확인할 수 있습니다.  
 
 ## 🚀 사용 방법
-1. [웹사이트 링크](https://username.github.io/lotto-generator)에 접속합니다.  
+1. [웹사이트 링크](https://kimeezy.github.io/lotto)에 접속합니다.  
 2. 생성 모드를 선택합니다 (랜덤 / 가중치 기반).  
 3. **'번호 생성'** 버튼을 클릭합니다.  
 4. 생성된 번호와 보너스 번호를 확인합니다.  
@@ -19,9 +19,3 @@
 ## 🛠️ 기술 스택
 - **Frontend:** HTML, CSS, JavaScript  
 - **호스팅:** GitHub Pages  
-
-## 🌟 데모
-[https://username.github.io/lotto-generator](https://username.github.io/lotto-generator)  
-
-## 📧 문의
-궁금한 점이 있다면 언제든지 문의하세요!  
